@@ -4,9 +4,11 @@
   "author": "Joona Viertola <git@joonaviertola.com>",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "apps/*"
   ],
   "scripts": {
-    "build": "(cd packages/text && npm run build)"
+    "build": "(cd packages/text && npm run build)",
+    "start": "(cd apps/docs && npm run dev)"
   }
 }
