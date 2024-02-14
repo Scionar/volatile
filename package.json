@@ -9,6 +9,9 @@
   ],
   "scripts": {
     "build": "(cd packages/text && npm run build)",
-    "start": "(cd apps/docs && npm run dev)"
+    "start": "turbo run dev"
+  },
+  "devDependencies": {
+    "turbo": "^1.12.3"
   }
 }
