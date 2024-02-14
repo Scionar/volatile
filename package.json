@@ -5,5 +5,8 @@
   "private": true,
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "scripts": {
+    "build": "(cd packages/text && npm run build)"
+  }
 }
