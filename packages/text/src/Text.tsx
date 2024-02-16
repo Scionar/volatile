@@ -5,5 +5,13 @@ type TextProps = {
 };
 
 export const Text: React.FunctionComponent<TextProps> = ({ children }) => {
-  return children;
+  return (
+    <span
+      style={{
+        color: "var(--text-body-color)",
+      }}
+    >
+      {children}
+    </span>
+  );
 };
