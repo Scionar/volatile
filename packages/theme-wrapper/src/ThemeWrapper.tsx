@@ -2,7 +2,9 @@ import React, { ReactNode } from "react";
 
 type ThemeWrapperProps = {
   children: ReactNode;
-  theme: any;
+  theme: {
+    textBodyColor?: string;
+  };
 };
 
 export const ThemeWrapper: React.FunctionComponent<ThemeWrapperProps> = ({
