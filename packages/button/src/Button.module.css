@@ -4,7 +4,7 @@
   border-width: 1px;
   border-style: solid;
   border-image: none;
-  border-color: rgba(31, 35, 40, 0.15);
+  border-color: var(--v-component-button-border-color, rgba(31, 35, 40, 0.15));
   font-family: inherit;
   font-weight: 500;
   font-size: 14px;
@@ -26,29 +26,43 @@
   transition-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
   transition-delay: 0s;
   transition-property: color, fill, background-color, border-color;
-  color: #24292f;
-  background-color: #f6f8fa;
+  color: var(--v-component-button-text-color, #24292f);
+  background-color: var(--v-component-button-background-color, #f6f8fa);
   box-shadow: rgba(31, 35, 40, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.25);
 }
 
 .root:hover {
-  background-color: #f3f4f6;
-  border-color: rgba(31, 35, 40, 0.15);
+  background-color: var(--v-component-button-background-color-hover, #f3f4f6);
+  border-color: var(
+    --v-component-button-border-color-hover,
+    rgba(31, 35, 40, 0.15)
+  );
 }
 
 .root:active {
-  background-color: hsla(220, 14%, 93%, 1);
-  border-color: rgba(31, 35, 40, 0.15);
+  background-color: var(
+    --v-component-button-background-color-active,
+    hsla(220, 14%, 93%, 1)
+  );
+  border-color: var(
+    --v-component-button-border-color-active,
+    rgba(31, 35, 40, 0.15)
+  );
 }
 
 .root:focus-visible {
   box-shadow: none;
-  outline: 2px solid #0969da;
+  outline: 2px solid var(--v-global-focus-color, #0969da);
   outline-offset: -2px;
 }
 
 .root:disabled {
-  cursor: not-allowed;
+  background-color: var(
+    --v-component-button-background-color-disabled,
+    #eaeef2b3
+  );
+  border-color: var(--v-component-button-border-color-disabled, #eaeef2b3);
   box-shadow: none;
-  color: #8c959f;
+  color: var(--v-component-button-text-color-disabled, #8c959f);
+  cursor: not-allowed;
 }
