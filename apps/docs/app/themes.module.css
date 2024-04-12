@@ -1,0 +1,11 @@
+.themeRed {
+  --text-body-color: #ff0000;
+}
+
+.themeGreen {
+  --text-body-color: #00ff00;
+}
+
+.themeYellow {
+  --text-body-color: #ffff00;
+}

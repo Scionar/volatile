@@ -1,19 +1,22 @@
 import { Text } from "@volatile-ds/text";
 import styles from "./page.module.css";
 import { ThemeWrapper } from "@volatile-ds/theme-wrapper";
+import { ButtonBase } from "@volatile-ds/button";
+import themes from "./themes.module.css";
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <ThemeWrapper theme={{ textBodyColor: "#FF0000" }}>
+      <ThemeWrapper theme={themes.themeRed}>
         <Text>Red</Text>
-      </ThemeWrapper>
+        <ButtonBase>Meow</ButtonBase>
 
-      <ThemeWrapper theme={{ textBodyColor: "#00FF00" }}>
-        <Text>Green</Text>
+        <ThemeWrapper theme={themes.themeGreen}>
+          <Text>Green</Text>
 
-        <ThemeWrapper theme={{ textBodyColor: "#FFFF00" }}>
-          <Text>Yellow</Text>
+          <ThemeWrapper theme={themes.themeYellow}>
+            <Text>Yellow</Text>
+          </ThemeWrapper>
         </ThemeWrapper>
       </ThemeWrapper>
     </main>
