@@ -7,17 +7,11 @@ import themes from "./themes.module.css";
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div
-        className={styles.table}
-        style={{
-          gap: "100px",
-        }}
-      >
-        <div className={styles.row}>
-          <h1>CSS variable theme</h1>
+      <div className={styles.table}>
+        <div className={styles.row} style={{ justifyContent: "center" }}>
+          <h1>CSS variable theme 🎨</h1>
         </div>
-        <div className={styles.row}>
-          <h2>Buttons</h2>
+        <div className={styles.row} style={{ marginTop: "50px" }}>
           <div className={styles.columnVertical}>
             <ButtonBase>Default theme</ButtonBase>
             <ButtonBase disabled>Default theme</ButtonBase>
@@ -30,6 +24,8 @@ export default function Home() {
             <ButtonBase disabled>Dark theme</ButtonBase>
           </ThemeWrapper>
         </div>
+
+        {/*
         <div className={styles.row}>
           <h2>Texts</h2>
           <div className={styles.column}>
@@ -46,6 +42,7 @@ export default function Home() {
             </ThemeWrapper>
           </div>
         </div>
+                */}
       </div>
     </main>
   );
